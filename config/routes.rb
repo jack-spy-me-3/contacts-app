@@ -6,5 +6,7 @@ Rails.application.routes.draw do
   get "/contacts/:id", to: "contacts#show"
   get "/contacts/:id/edit", to: "contacts#edit"
   patch "/contacts/:id", to: "contacts#update"
-  delete "/contacts/:id", to: "contacts#destroy"
+  delete "/contacts/:id", to: 'contacts#destroy'
+
+  get "/all_johns", to: 'contacts#all_johns'
 end
