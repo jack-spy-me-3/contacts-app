@@ -1,6 +1,6 @@
 <h1>All Contacts</h1>
 <% @contacts.each do |contact| %>
-  <p>Name: <%= contact.full_name %></p>
+  <p><%= link_to "Name: #{contact.full_name}", "/contacts/#{contact.id}" %></p>
   <p>Email: <%= contact.email %></p>
   <p>Phone Number: <%= contact.phone_number %></p>
   <%= link_to "Delete contact forever", "/contacts/#{contact.id}", method: :delete %>
