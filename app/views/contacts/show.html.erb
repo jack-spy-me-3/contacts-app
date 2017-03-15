@@ -3,4 +3,11 @@
 <p>Email: <%= @contact.email %></p>
 <p>Phone Number: <%= @contact.japanese_number %></p>
 <p>Updated At: <%= @contact.friendly_updated_at %></p>
+<!--  -->
+<p>Groups:</p>
+<ul>
+  <% @contact.groups.each do |group| %>
+    <li><%= group.name.capitalize %></li>
+  <% end %>
+</ul>
 <%= link_to "Delete contact forever", "/contacts/#{@contact.id}", method: :delete %>

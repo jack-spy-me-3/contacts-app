@@ -1,3 +1,6 @@
+<% Group.all.each do |group| %>
+  <a href="/contacts?group=<%= group.name %>">Filter: <%= group.name.capitalize %></a>
+<% end %>
 <h1>All Contacts</h1>
 <% @contacts.each do |contact| %>
   <p><%= link_to "Name: #{contact.full_name}", "/contacts/#{contact.id}" %></p>
